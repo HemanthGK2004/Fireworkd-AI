@@ -382,3 +382,5 @@ document.addEventListener('DOMContentLoaded', () => {
         copyToClipboard(sentimentResult.textContent);
     });
 });
+
+// Initialize tooltips
