@@ -10,11 +10,14 @@ import uuid
 from werkzeug.utils import secure_filename
 import threading
 import time
+from dotenv import load_dotenv
 
 # Configuration
 UPLOAD_FOLDER = 'uploads'
 ALLOWED_EXTENSIONS = {'txt', 'pdf', 'docx', 'md'}
-API_KEY = "fw_3ZV3je3RsJbgBZHkigLEpPQS"  # Replace with environment variable in production
+load_dotenv()
+API_KEY = os.getenv("API_KEY")
+
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
